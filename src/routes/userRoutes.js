@@ -35,3 +35,4 @@ app.delete('/v1/user/:id', (request, res) => {
     })
 })
 
+module.exports
