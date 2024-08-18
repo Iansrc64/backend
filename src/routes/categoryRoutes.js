@@ -2,6 +2,10 @@ const app = require('./app-express.js')
 
 const { Category } = require('../models/models.js')
 
+app.get("/", (req, res) => {
+    res.send("Olá, mundo");
+});
+
 app.get('/v1/category/search', async (req, res) => {
     console.log(req.query)
 

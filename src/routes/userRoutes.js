@@ -2,6 +2,10 @@ const app = require('./app-express.js')
 
 const { User } = require('../models/models.js');
 
+app.get("/", (req, res) => {
+    res.send("Olá, mundo");
+});
+
 app.get('/v1/user/:id', (request, res) => {
     console.log('request.url', request.url) 
     console.log('request.params.id', request.params.id)
