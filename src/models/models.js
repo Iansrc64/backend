@@ -6,7 +6,12 @@ const sequelize = new Sequelize(uri);
 const User = sequelize.define(
   "User",
   {
-    
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+      allowNull: false,
+    },
     firstname: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -32,7 +37,11 @@ const User = sequelize.define(
 const Category = sequelize.define(
   "Category",
   {
-    
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -55,6 +64,11 @@ const Category = sequelize.define(
 const Product = sequelize.define(
   "Product",
   {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
     enabled: {
       type: DataTypes.STRING,
       allowNull: false,
